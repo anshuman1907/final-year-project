@@ -2,44 +2,27 @@ const express = require('express');
 const axios = require('axios');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-
+const fs = require('fs');
 const app = express();
 const PORT = process.env.PORT || 3000;
+let employees = require('./users.json');
 
 // Middleware
 app.use(bodyParser.json());
 app.use(cors());
-// Data storage (in-memory for simplicity)
-let employees = [];
 
-// Fetch data from an external API and store it
-async function fetchData() {
-    console.log("fetching data");
-    try {
-        let fetchedUsers = [];
-        let page = 1;
-        while (fetchedUsers.length < 10) {
-            const response = await axios.get(`https://jsonplaceholder.typicode.com/users`);
-            fetchedUsers = fetchedUsers.concat(response.data);
-            page++;
+
+function writeToFile(jsonData){
+    fs.writeFile('users.json', JSON.stringify(jsonData), (err) => {
+        if (err) {
+            console.error('Error writing file', err);
+        } else {
+            console.log('JSON file has been written');
         }
-        employees = fetchedUsers.slice(0, 100); // Only keep the first 100 users
-        console.log('Data fetched successfully.');
-    } catch (error) {
-        console.error('Error fetching data:', error.message);
-    }
-}
-
-// Fetch data on server start
-async function startServer() {
-    await fetchData();
-    // Start the server
-    app.listen(PORT, () => {
-        console.log(`Server is running on port ${PORT}`);
     });
 }
 
-startServer();
+app.listen(PORT, () => {console.log(`Server is running on port ${PORT}`);});
 
 
 // Routes
