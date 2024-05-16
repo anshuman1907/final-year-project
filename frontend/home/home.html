@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Bootstrap Card</title>
+    <title>Home</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
@@ -13,15 +13,23 @@
 <style>
     .card-body>img {
         min-height: 160px;
-        width: 100%;
+        width: 75%;
     }
 
     #main {
-        background-image: url("https://source.unsplash.com/1280x720/?evidence");
+        background-image: url("./background\ home.png");
         background-repeat: no-repeat;
         background-size: cover;
         height: calc(100vh - 56px);
         width: 100%;
+    }
+
+    .card {
+        min-height: 35vh;
+    }
+
+    .img {
+        max-width: 100%;
     }
 </style>
 
@@ -37,17 +45,20 @@
         <div class="collapse navbar-collapse text-success " id="navbarsExample09">
             <ul class="navbar-nav mr-auto bg-light">
                 <li class="nav-item active">
-                    <a class="nav-link me-2" href="./admin/admin.html">Admin Login <span
+                    <a class="nav-link me-2" href="./admin/admin login.html">Admin Login <span
                             class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Forensic Login<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="./forensic/forensiclogin.html">Forensic Login<span
+                            class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link me-2" href="#">Staff Login <span class="sr-only">(current)</span></a>
+                    <a class="nav-link me-2" href="./staff/staff login.html">Staff Login <span
+                            class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link me-2" href="#">Police Login <span class="sr-only">(current)</span></a>
+                    <a class="nav-link me-2" href="./police/police login.html">Police Login <span
+                            class="sr-only">(current)</span></a>
                 </li>
 
                 <!-- <li class="nav-item">
@@ -70,25 +81,28 @@
           </form> -->
         </div>
     </nav>
-    <div class="d-flex align-items-center justify-content-center" id="main">
+    <div class="d-flex align-items-center justify-content-center " id="main">
         <div class="container row ml-auto mr-auto mx-auto align-middle">
-         
-            <div class="col-sm">
+
+            <div class="col-sm ">
                 <div class="card">
-                    <div class="card-body text-white bg-dark">
-                        <img src="https://source.unsplash.com/160x100/?staff" alt="">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="./admin/admin.html" class="btn btn-primary">Admin Login</a>
+                    <div class="card-body text-black bg-light">
+                        <img src="./admin.png" alt="">
+                        <h5 class="card-title">Admin Login</h5>
+                        <p class="card-text">With supporting Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Unde nesciunt alias similique placeat natus! Illo eos esse tenetur nulla reprehenderit.</p>
+                        <a href="./admin/admin login.html" class="btn btn-primary">Admin Login</a>
                     </div>
                 </div>
             </div>
             <div class="col-sm">
                 <div class="card">
-                    <div class="card-body text-white bg-dark">
-                        <img src="https://source.unsplash.com/160x100/?staff" alt="">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <div class="card-body text-black bg-ligh">
+                        <img src="./forensic.png" alt="">
+                        <h5 class="card-title">Forensic Login</h5>
+                        <p class="card-text">With supporting Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Culpa ea aliquid molestias mollitia commodi omnis distinctio, saepe, ipsum qui quod, tota
+                        </p>
                         <a href="./forensic/forensiclogin.html" class="btn btn-primary">Forensic Login</a>
                     </div>
                 </div>
@@ -96,26 +110,31 @@
 
             <div class="col-sm">
                 <div class="card">
-                    <div class="card-body text-white bg-dark">
-                        <img src="https://source.unsplash.com/160x100/?staff" alt="">
+                    <div class="card-body text-black bg-ligh">
+                        <img src="./staff.png" alt="">
                         <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <p class="card-text">With supporting. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                            Quos commodi illum consequatur suscipit quibusdam ut molestias eligendi dolores, totam aut!
+                        </p>
                         <a href="./staff/staff login.html" class="btn btn-primary">Staff Login</a>
                     </div>
                 </div>
             </div>
             <div class="col-sm">
                 <div class="card">
-                    <div class="card-body text-white bg-dark">
-                        <img src="https://source.unsplash.com/160x100/?staff" alt="">
+                    <div class="card-body text-black bg-ligh">
+                        <img src="./police.png" alt="">
                         <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <p class="card-text">With supporting Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                            Culpa tempora error necessitatibus, quidem quas sapiente reiciendis eligendi odit. Commodi,
+                            illo. </p>
                         <a href="./police/police login.html" class="btn btn-primary">Police Login</a>
                     </div>
                 </div>
             </div>
 
         </div>
+
     </div>
 
 
