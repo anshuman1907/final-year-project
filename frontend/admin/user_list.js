@@ -12,7 +12,7 @@ $(document).ready(function () {
             { "data": "email", "title": "Email ID" },
             { "data": "phone", "title": "Contact" },
             {
-                "data": null,
+               "data": null,
                 "render": function (data, type, row) {
                     return `
                         <a href="#" class="edit" data-toggle="modal" data-target="#editEmployeeModal" data-userid="${row.id}"><i
